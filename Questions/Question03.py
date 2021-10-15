@@ -37,3 +37,25 @@ def edit_course():
     else:
         print("Invalid Course code")
 
+
+def view_courses():
+    # use pprint library to Display course list
+    pp = pprint.PrettyPrinter(indent=2)
+    pp.pprint(courses)
+
+
+if __name__ == '__main__':
+    # main function to read user option
+
+    while 1:
+        user_option = int(input("1. Add Course\n2. Edit Course\n3. Display Courses\n4. Quit\n"))
+        if user_option == 1:
+            add_course()
+        elif user_option == 2:
+            edit_course()
+        elif user_option == 3:
+            view_courses()
+        elif user_option == 4:
+            break
+        else:
+            print("Please enter a valid option")
