@@ -23,13 +23,17 @@ if __name__ == "__main__":
     import timeit
     from cryptography.fernet import Fernet
 
+
     def passwordEncrypt(passwd):
-        # key = "EncryptKey"
         key = Fernet.generate_key()
         fernet = Fernet(key)
         encMessage = fernet.encrypt(passwd.encode())
         print(encMessage)
-        print(timeit.timeit('output = print(encMessage)'))
+        return
+
 
     password = input("Enter your password : ")
     print(passwordEncrypt(password))
+    print(timeit.timeit("passwordEncrypt(passwd)",
+                        setup="from __main__ import passwordEncrypt; message = 'Hello'",
+                        number=1))

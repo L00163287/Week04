@@ -16,6 +16,19 @@
 import platform
 import os
 
+def os_details():
+    # Displays the name of the machine.
+    print("Machine Name \t\t : {}".format(platform.machine()))
+    # Displays the Node of the machine.
+    print("Node Name \t\t\t : {}".format(platform.node()))
+    # Displays the name of the owner of the machine.
+    print("Operating System \t : {}".format(platform.system()))
+    # Displays the Current Path of the os
+    print("Current Path \t\t : {}".format(os.path))
+    # Displays the python version
+    print("Python version \t\t : {}".format(platform.python_version()))
+
+
 if __name__ == "__main__":
     '''
        Main method of application :
@@ -25,9 +38,6 @@ if __name__ == "__main__":
        Returns:
         none
     '''
+    # Use the function to display details
+    os_details()
 
-    print("Machine Name \t\t : {}".format(platform.machine()))
-    print("Node Name \t\t\t : {}".format(platform.node()))
-    print("Operating System \t : {}".format(platform.system()))
-    print("Current Path \t\t : {}".format(os.path))
-    print("Python version \t\t : {}".format(platform.python_version()))
