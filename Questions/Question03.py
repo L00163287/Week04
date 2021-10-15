@@ -10,20 +10,30 @@
 #
 """
 
+import pprint
 
-def read_courses():
-    print("Tuple of courses")
+# Initialize empty course list
+courses = {}
 
 
-if __name__ == '''__main__''':
+def add_course():
+    # function to add new course name and course code
+    course_name = input("Course name :")
+    course_code = input("Course code :")
+    courses[course_code] = course_name
 
-    a = 0
-    print("Menu")
-    print("\n \n")
-    print("1. Display the list of courses in LYIT")
-    a = input("Enter your Choice : ")
-    if (a == 1):
-        read_courses()
+
+def edit_course():
+    # function to edit course name
+    code = input("Enter course code: {}".format(courses))
+    if code in courses:
+        # Get old course name
+        course = courses[code]
+        # Get updated course name from the user
+        updated = input("Enter the course name :")
+        # Update value in list
+        courses[code] = updated
+        print("Course name changed successfully {} as {}".format(course, updated))
     else:
-        print("Wrong selection")
-    print("")
+        print("Invalid Course code")
+
