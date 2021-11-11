@@ -45,7 +45,14 @@ def view_courses():
 
 
 if __name__ == '__main__':
-    # main function to read user option
+    '''
+           Main method of application :
+
+           Parameters:
+            none
+           Returns:
+            none
+        '''
 
     while 1:
         user_option = int(input("1. Add Course\n2. Edit Course\n3. Display Courses\n4. Quit\n"))

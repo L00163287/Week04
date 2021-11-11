@@ -35,5 +35,4 @@ if __name__ == "__main__":
     password = input("Enter your password : ")
     print(passwordEncrypt(password))
     print(timeit.timeit("passwordEncrypt(passwd)",
-                        setup="from __main__ import passwordEncrypt; message = 'Hello'",
-                        number=1))
+                        setup="from __main__ import passwordEncrypt; message = 'Hello'", number=1))
